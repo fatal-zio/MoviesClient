@@ -398,3 +398,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/Movies.API/Movies.db-shm
+/Movies.API/Movies.db-wal

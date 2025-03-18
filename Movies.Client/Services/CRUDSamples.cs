@@ -13,14 +13,13 @@ public class CRUDSamples(IHttpClientFactory httpClientFactory) : IIntegrationSer
     {
         var httpClient = _httpClientFactory.CreateClient();
 
-        httpClient.BaseAddress = new Uri("http://localhost:5255");
+        httpClient.BaseAddress = new Uri("http://localhost:5000");
         httpClient.Timeout = new TimeSpan(0, 0, 30);
-
-        Thread.Sleep(5000);
 
         var response = await httpClient.GetAsync("api/movies");
         response.EnsureSuccessStatusCode();
 
-        var content = response.Content.ReadAsStringAsync();
+        var content = await response.Content.ReadAsStringAsync();
+        Console.Write(content.ToString());
     }
 }

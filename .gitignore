@@ -400,3 +400,4 @@ FodyWeavers.xsd
 *.sln.iml
 /Movies.API/Movies.db-shm
 /Movies.API/Movies.db-wal
+/Movies.API/Movies.db
